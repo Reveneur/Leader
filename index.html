@@ -1,82 +1,1265 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Thinkaigain.nl - De ultieme bron voor AI Geletterdheid door expert Dick Noort. Leer alles over de impact van kunstmatige intelligentie op onderwijs en werk.">
-    <meta name="keywords" content="AI Geletterdheid, Dick Noort, thinkaigain.nl, kunstmatige intelligentie">
-    <meta name="author" content="Dick Noort">
-    <title>AI Geletterdheid door Dick Noort | thinkaigain.nl</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            background-color: #f4f4f4;
-        }
-        header {
-            background: #35424a;
-            color: #ffffff;
-            padding: 20px 0;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-        }
-        header .container {
-            background: transparent;
-            box-shadow: none;
-            margin-top: 0;
-            padding: 0;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-            padding: 20px;
-            background: #ffffff;
-            margin-top: 20px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        article {
-            margin-bottom: 20px;
-        }
-        footer {
-            text-align: center;
-            padding: 10px;
-            background: #35424a;
-            color: #ffffff;
-            margin-top: 20px;
-        }
-    </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K6VMG3EKP2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-K6VMG3EKP2');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Geletterdheid door Dick Noort | Think AIgain Training & Workshops</title>
+  <meta name="description" content="Think AIgain, opgericht door Dick Noort, biedt AI trainingen, workshops en cursussen. Vergroot je AI Geletterdheid. Praktisch, toegankelijk en direct toepasbaar voor bedrijven en teams.">
+  <meta name="keywords" content="AI Geletterdheid, Dick Noort, Think AIgain, AI Training, AI Workshops, Kunstmatige Intelligentie">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://thinkaigain.nl/" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://thinkaigain.nl/">
+  <meta property="og:site_name" content="Think AIgain">
+  <meta property="og:title" content="AI Geletterdheid door Dick Noort | Think AIgain">
+  <meta property="og:description" content="Vergroot je AI Geletterdheid met Dick Noort. Praktische AI trainingen en workshops voor bedrijven en teams. Direct toepasbaar.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #FAFAF8;
+      --bg-alt:    #F2F1EE;
+      --white:     #FFFFFF;
+      --dark:      #0D0F1A;
+      --dark-mid:  #151827;
+      --text:      #1A1C2A;
+      --muted:     #6B6D7A;
+      --muted-2:   #9B9DAA;
+      --red:       #E8001D;
+      --red-light: rgba(232,0,29,0.08);
+      --red-mid:   rgba(232,0,29,0.18);
+      --border:    #E8E8E4;
+      --border-mid:#D8D8D4;
+      --max-w:     1160px;
+      --nav-h:     68px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* ── UTILITIES ── */
+    .container { max-width: var(--max-w); margin: 0 auto; padding: 0 2rem; }
+
+    .label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 1rem;
+    }
+    .label::before {
+      content: '';
+      display: block;
+      width: 20px; height: 2px;
+      background: var(--red);
+      flex-shrink: 0;
+    }
+
+    /* ── REVEAL ── */
+    .reveal {
+      opacity: 0; transform: translateY(36px);
+      transition: opacity 0.75s cubic-bezier(0.22,1,0.36,1), transform 0.75s cubic-bezier(0.22,1,0.36,1);
+    }
+    .reveal-left {
+      opacity: 0; transform: translateX(-44px);
+      transition: opacity 0.85s cubic-bezier(0.22,1,0.36,1), transform 0.85s cubic-bezier(0.22,1,0.36,1);
+    }
+    .reveal-right {
+      opacity: 0; transform: translateX(44px);
+      transition: opacity 0.85s cubic-bezier(0.22,1,0.36,1), transform 0.85s cubic-bezier(0.22,1,0.36,1);
+    }
+    .reveal.visible, .reveal-left.visible, .reveal-right.visible { opacity: 1; transform: none; }
+
+    /* ── NAVIGATIE ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 100; height: var(--nav-h);
+      display: flex; align-items: center;
+      border-bottom: 1px solid transparent;
+      transition: background 0.4s, border-color 0.4s, backdrop-filter 0.4s;
+    }
+    nav.scrolled {
+      background: rgba(13,15,26,0.9);
+      backdrop-filter: blur(22px); -webkit-backdrop-filter: blur(22px);
+      border-color: rgba(255,255,255,0.06);
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; width: 100%; }
+    .nav-logo { display: flex; align-items: center; text-decoration: none; }
+    .nav-logo img { height: 34px; width: auto; }
+    .nav-links { display: flex; list-style: none; gap: 2.25rem; }
+    .nav-links a {
+      color: rgba(255,255,255,0.5); text-decoration: none;
+      font-size: 0.875rem; font-weight: 500; transition: color 0.2s;
+    }
+    .nav-links a:hover { color: rgba(255,255,255,0.9); }
+    .nav-cta {
+      display: inline-flex; align-items: center; gap: 0.35rem;
+      background: var(--red); color: var(--white); text-decoration: none;
+      padding: 0.58rem 1.2rem; border-radius: 8px;
+      font-size: 0.87rem; font-weight: 700;
+      transition: opacity 0.2s, transform 0.15s, box-shadow 0.2s;
+    }
+    .nav-cta:hover { opacity: 0.9; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(232,0,29,0.3); }
+    .hamburger {
+      display: none; background: none; border: none; cursor: pointer;
+      padding: 0.4rem; flex-direction: column; gap: 5px;
+    }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--white); border-radius: 2px; }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100svh; display: flex; align-items: center;
+      padding-top: var(--nav-h); position: relative; overflow: hidden;
+      background: var(--dark);
+    }
+    .hero-grid {
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+      background-size: 72px 72px; z-index: 0;
+    }
+
+    /* Parallax hero foto */
+    .hero-photo-wrap {
+      position: absolute; right: 0; top: 0; bottom: 0; width: 52%;
+      overflow: hidden; z-index: 0;
+    }
+    .hero-photo-img {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+    .hero-photo-wrap::before {
+      content: ''; position: absolute; inset: 0; z-index: 1;
+      background: linear-gradient(90deg, rgba(13,15,26,0.8) 15%, rgba(13,15,26,0.36) 50%, transparent 100%);
+    }
+    @media (max-width: 1280px) and (min-width: 681px) {
+      .hero-photo-wrap::before {
+        background: linear-gradient(90deg, rgba(13,15,26,1) 40%, rgba(13,15,26,0.65) 72%, transparent 100%);
+      }
+    }
+    .hero-photo-wrap::after {
+      content: ''; position: absolute; inset: 0; z-index: 1;
+      background: linear-gradient(to bottom, transparent 80%, rgba(13,15,26,0.8) 100%);
+    }
+
+    .hero-glow {
+      position: absolute; width: 700px; height: 700px;
+      background: radial-gradient(circle, rgba(232,0,29,0.12) 0%, transparent 65%);
+      top: -150px; left: -200px; pointer-events: none; z-index: 1;
+    }
+    .hero-inner { position: relative; z-index: 2; padding: 7rem 0 6rem; max-width: 680px; }
+
+    /* ── VERTICALE TEKST (Bellerose-stijl) ── */
+    .hero-vertical-wrap {
+      position: fixed;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%) rotate(180deg);
+      writing-mode: vertical-rl;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 0.6rem;
+      z-index: 99;
+      pointer-events: none;
+    }
+    .hero-vertical-brand {
+      font-size: clamp(4rem, 9vw, 7.5rem);
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.08);
+      white-space: nowrap;
+      line-height: 1;
+    }
+    .hero-vertical-slogan {
+      font-size: clamp(0.9rem, 2vw, 1.6rem);
+      font-weight: 600;
+      color: rgba(255,255,255,0.04);
+      white-space: nowrap;
+      line-height: 1;
+      text-transform: none;
+    }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 0.75rem;
+      margin-bottom: 2.25rem; font-size: 0.76rem; font-weight: 600;
+      letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.45);
+    }
+    .hero-eyebrow .dot {
+      width: 7px; height: 7px; background: var(--red);
+      border-radius: 50%; animation: blink 2.5s ease-in-out infinite;
+    }
+    @keyframes blink { 0%,100% { opacity:1; } 50% { opacity:0.2; } }
+    .hero h1 {
+      font-size: clamp(3.2rem, 7vw, 5.8rem); font-weight: 900;
+      line-height: 0.93; letter-spacing: -3.5px; color: var(--white); margin-bottom: 2rem;
+    }
+    .hero h1 em { font-style: italic; color: var(--red); }
+    .hero-desc {
+      font-size: 1.1rem; color: rgba(255,255,255,0.5);
+      line-height: 1.8; max-width: 500px; margin-bottom: 2.75rem;
+    }
+    .hero-actions { display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap; margin-bottom: 3.5rem; }
+    .btn-red {
+      display: inline-flex; align-items: center; gap: 0.45rem;
+      background: var(--red); color: var(--white); text-decoration: none;
+      padding: 0.95rem 1.8rem; border-radius: 10px;
+      font-weight: 700; font-size: 0.95rem;
+      transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
+    }
+    .btn-red:hover { transform: translateY(-2px); box-shadow: 0 14px 40px rgba(232,0,29,0.35); opacity: 0.92; }
+    .btn-ghost-white {
+      display: inline-flex; align-items: center; gap: 0.45rem;
+      color: rgba(255,255,255,0.65); text-decoration: none;
+      padding: 0.95rem 1.8rem; border-radius: 10px; font-weight: 600; font-size: 0.95rem;
+      border: 1px solid rgba(255,255,255,0.14); transition: border-color 0.2s, color 0.2s;
+    }
+    .btn-ghost-white:hover { border-color: rgba(255,255,255,0.32); color: var(--white); }
+    .hero-proof {
+      display: flex; align-items: center; gap: 1rem;
+      padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.07);
+    }
+    .hero-proof-faces { display: flex; }
+    .hero-proof-faces span {
+      width: 32px; height: 32px; border-radius: 50%;
+      background: rgba(232,0,29,0.15); border: 2px solid var(--dark);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.9rem; margin-left: -8px;
+    }
+    .hero-proof-faces span:first-child { margin-left: 0; }
+    .hero-proof p { font-size: 0.82rem; color: rgba(255,255,255,0.4); line-height: 1.5; }
+    .hero-proof p strong { color: rgba(255,255,255,0.75); }
+    .hero-scroll {
+      position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%); z-index: 2;
+      display: flex; flex-direction: column; align-items: center; gap: 0.6rem;
+      color: rgba(255,255,255,0.25); font-size: 0.68rem; letter-spacing: 1.5px; text-transform: uppercase;
+    }
+    .scroll-line {
+      width: 1px; height: 44px;
+      background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.25));
+      animation: scrollPulse 2.2s ease-in-out infinite;
+    }
+    @keyframes scrollPulse { 0%,100% { opacity:0.25; transform:scaleY(1); } 50% { opacity:0.7; transform:scaleY(0.7); } }
+
+    /* ── CIJFERS ── */
+    .cijfers { background: var(--white); border-bottom: 1px solid var(--border); }
+    .cijfers-inner { display: grid; grid-template-columns: repeat(4, 1fr); }
+    .cijfer-item {
+      padding: 2.25rem 2rem; border-right: 1px solid var(--border);
+      display: flex; flex-direction: column; gap: 0.3rem;
+    }
+    .cijfer-item:last-child { border-right: none; }
+    .cijfer-num { font-size: 2.2rem; font-weight: 900; color: var(--dark); letter-spacing: -1.5px; line-height: 1; }
+    .cijfer-num em { font-style: normal; color: var(--red); }
+    .cijfer-label { font-size: 0.82rem; color: var(--muted); font-weight: 500; }
+
+    /* ── DIENSTEN ── */
+    .diensten { padding: 8rem 0; background: var(--bg); }
+    .section-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: end; margin-bottom: 4rem; }
+    .section-intro h2 { font-size: clamp(2.4rem, 4vw, 3.4rem); font-weight: 900; letter-spacing: -2px; line-height: 1.0; color: var(--dark); }
+    .section-intro-right p { font-size: 1rem; color: var(--muted); line-height: 1.8; margin-bottom: 1.5rem; }
+    .btn-dark {
+      display: inline-flex; align-items: center; gap: 0.45rem;
+      background: var(--dark); color: var(--white); text-decoration: none;
+      padding: 0.85rem 1.65rem; border-radius: 9px; font-weight: 700; font-size: 0.9rem;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .btn-dark:hover { background: var(--red); transform: translateY(-2px); }
+    .diensten-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .dienst-card {
+      background: var(--white); border: 1px solid var(--border); border-radius: 20px;
+      overflow: hidden; display: flex; flex-direction: column;
+      transition: transform 0.32s cubic-bezier(0.22,1,0.36,1), box-shadow 0.32s, border-color 0.25s;
+    }
+    .dienst-card:hover { transform: translateY(-8px); box-shadow: 0 28px 64px rgba(0,0,0,0.1); border-color: var(--red); transition-delay: 0s; }
+
+    /* Parallax image container voor kaarten */
+    .dienst-img {
+      height: 220px; position: relative; overflow: hidden; background: var(--dark);
+    }
+    .dienst-img .pimg {
+      position: absolute;
+      width: 100%; height: 130%;
+      top: -15%;
+      object-fit: cover;
+      object-position: center;
+      will-change: transform;
+      display: block;
+    }
+    .dienst-img-overlay {
+      position: absolute; inset: 0; z-index: 1;
+      background: linear-gradient(to bottom, rgba(13,15,26,0.2) 0%, rgba(13,15,26,0.55) 100%);
+    }
+    .dienst-img-label {
+      position: absolute; bottom: 1rem; right: 1rem; z-index: 2;
+      background: rgba(255,255,255,0.12); backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.18); color: rgba(255,255,255,0.85);
+      font-size: 0.68rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+      padding: 0.28rem 0.65rem; border-radius: 6px;
+    }
+    .dienst-body { padding: 1.75rem; flex: 1; display: flex; flex-direction: column; }
+    .dienst-body h3 { font-size: 1.15rem; font-weight: 800; color: var(--dark); margin-bottom: 0.65rem; letter-spacing: -0.4px; }
+    .dienst-body p { font-size: 0.9rem; color: var(--muted); line-height: 1.72; flex: 1; margin-bottom: 1.5rem; }
+    .dienst-link {
+      display: inline-flex; align-items: center; gap: 0.35rem;
+      color: var(--red); font-size: 0.85rem; font-weight: 700; text-decoration: none;
+      transition: gap 0.2s; align-self: flex-start;
+    }
+    .dienst-link:hover { gap: 0.65rem; }
+    .na-afloop {
+      margin-top: 1.25rem; padding-top: 1.25rem;
+      border-top: 1px solid var(--border);
+    }
+    .na-afloop-label {
+      font-size: 0.67rem; font-weight: 700; letter-spacing: 1.5px;
+      text-transform: uppercase; color: var(--muted-2); margin-bottom: 0.45rem; display: block;
+    }
+    .na-afloop p { font-size: 0.83rem !important; color: var(--muted); line-height: 1.65; margin-bottom: 0 !important; flex: 0 !important; }
+
+    /* ── WAAROM GEMEENTEN ── */
+    .waarom-gem { padding: 8rem 0; background: var(--bg-alt); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .waarom-gem-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+    .waarom-gem-inner h2 { font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 900; letter-spacing: -1.5px; color: var(--dark); line-height: 1.05; margin-bottom: 1.25rem; }
+    .wg-tekst p { font-size: 0.97rem; color: var(--muted); line-height: 1.82; margin-bottom: 1rem; }
+    .wg-quote {
+      font-size: 1.05rem !important; font-weight: 700; color: var(--dark) !important;
+      font-style: italic; border-left: 3px solid var(--red); padding-left: 1.1rem;
+      margin-top: 1.75rem !important; margin-bottom: 0 !important; line-height: 1.55 !important;
+    }
+    .wg-cards { display: flex; flex-direction: column; gap: 1rem; }
+    .wg-card {
+      display: flex; gap: 1rem; align-items: flex-start; padding: 1.4rem;
+      background: var(--white); border: 1px solid var(--border); border-radius: 14px;
+      transition: border-color 0.12s, box-shadow 0.12s, transform 0.12s;
+    }
+    .wg-card:hover { border-color: var(--red); }
+    .wg-icon { font-size: 1.1rem; width: 42px; height: 42px; background: var(--red-light); border: 1px solid var(--red-mid); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .wg-card h3 { font-size: 0.95rem; font-weight: 700; color: var(--dark); margin-bottom: 0.3rem; }
+    .wg-card p { font-size: 0.87rem; color: var(--muted); line-height: 1.65; }
+
+    /* ── MISSIE ── */
+    .missie { padding: 8rem 0; background: var(--dark); position: relative; overflow: hidden; }
+    .missie::before {
+      content: ''; position: absolute;
+      width: 900px; height: 900px;
+      background: radial-gradient(circle, rgba(232,0,29,0.08) 0%, transparent 55%);
+      top: -300px; right: -300px; pointer-events: none;
+    }
+    .missie-inner { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
+    .missie-left .grote-quote { font-size: clamp(2rem, 3.5vw, 2.9rem); font-weight: 900; color: var(--white); line-height: 1.18; letter-spacing: -1.5px; margin-bottom: 2rem; }
+    .missie-left .grote-quote em { font-style: italic; color: var(--red); }
+    .missie-left .sub { font-size: 1rem; color: rgba(240,235,225,0.85); line-height: 1.8; max-width: 420px; }
+    .missie-right { display: flex; flex-direction: column; gap: 1rem; }
+    .missie-punt {
+      display: flex; gap: 1.1rem; align-items: flex-start; padding: 1.5rem;
+      border: 1px solid rgba(255,255,255,0.05); border-radius: 16px;
+      background: rgba(255,255,255,0.02); transition: border-color 0.12s, background 0.12s, box-shadow 0.12s, transform 0.12s;
+    }
+    .missie-punt:hover { border-color: rgba(232,0,29,0.22); background: rgba(232,0,29,0.04); }
+    .m-icon {
+      font-size: 1.2rem; width: 46px; height: 46px;
+      background: rgba(232,0,29,0.08); border: 1px solid rgba(232,0,29,0.15);
+      border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .missie-punt h3 { font-size: 0.97rem; font-weight: 700; color: var(--white); margin-bottom: 0.35rem; }
+    .missie-punt p { font-size: 0.88rem; color: rgba(240,235,225,0.85); line-height: 1.68; }
+
+    /* ── PROFIEL ── */
+    .profiel { padding: 8rem 0; background: var(--white); }
+    .profiel-inner { display: grid; grid-template-columns: 400px 1fr; gap: 6rem; align-items: center; }
+    .profiel-foto-wrap {
+      position: relative;
+      aspect-ratio: 4/5;
+      overflow: hidden;
+      border-radius: 24px;
+      border: 1px solid var(--border);
+      transition: transform 0.12s ease, box-shadow 0.12s ease;
+      cursor: default;
+    }
+    .profiel-foto {
+      position: absolute;
+      width: 100%;
+      height: 130%;
+      top: -15%;
+      left: 0;
+      object-fit: cover;
+      object-position: center center;
+      will-change: transform;
+    }
+    .profiel-badge {
+      position: absolute; bottom: 1rem; right: 1rem; z-index: 2;
+      background: rgba(255,255,255,0.12); backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.18); color: rgba(255,255,255,0.85);
+      font-size: 0.68rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+      padding: 0.28rem 0.65rem; border-radius: 6px;
+    }
+    .profiel-content .label { margin-bottom: 0.75rem; }
+    .profiel-content h2 { font-size: clamp(2.2rem, 3.5vw, 3rem); font-weight: 900; letter-spacing: -1.5px; color: var(--dark); margin-bottom: 0.4rem; }
+    .profiel-rol { font-size: 0.9rem; color: var(--muted); font-weight: 500; margin-bottom: 2rem; }
+    .profiel-content p { font-size: 1rem; color: var(--muted); line-height: 1.82; margin-bottom: 1rem; }
+    .profiel-tags { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-top: 2rem; }
+    .p-tag {
+      background: var(--bg); border: 1px solid var(--border-mid); color: var(--text);
+      font-size: 0.78rem; font-weight: 600; padding: 0.38rem 0.9rem; border-radius: 100px;
+      transition: border-color 0.2s, background 0.2s, color 0.2s;
+    }
+    .p-tag:hover { border-color: var(--red); background: var(--red-light); color: var(--red); }
+
+    /* ── PARALLAX BAND ── */
+    .parallax-band {
+      position: relative;
+      height: 480px;
+      background-image: url('assets/528a7b1f-05b0-4025-8d03-f860cb0f0f6e.jpg');
+      background-attachment: fixed;
+      background-position: center 20%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: var(--dark);
+      background-blend-mode: luminosity;
+    }
+    .parallax-band-overlay {
+      position: absolute; inset: 0; z-index: 1;
+      background: linear-gradient(to bottom,
+        rgba(13,15,26,0.18) 0%,
+        rgba(13,15,26,0.08) 40%,
+        rgba(13,15,26,0.22) 100%);
+      pointer-events: none;
+    }
+
+    /* ── TESTIMONIAL ── */
+    .testimonial {
+      padding: 7rem 0; background: var(--bg-alt);
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+    }
+    .testimonial-inner { text-align: center; max-width: 720px; margin: 0 auto; }
+    .quote-mark { font-size: 5.5rem; line-height: 0.7; color: var(--red); font-family: Georgia, serif; margin-bottom: 1.5rem; display: block; }
+    .testimonial blockquote { font-size: clamp(1.35rem, 2.8vw, 2rem); font-weight: 700; font-style: italic; color: var(--dark); line-height: 1.42; letter-spacing: -0.5px; margin-bottom: 2rem; }
+    .testimonial blockquote em { font-style: italic; color: var(--red); }
+    .testimonial cite { font-style: normal; font-size: 0.85rem; color: var(--muted); font-weight: 500; }
+
+    /* ── CONTACT ── */
+    .contact { padding: 8rem 0; background: var(--dark); position: relative; overflow: hidden; }
+    .contact::before {
+      content: ''; position: absolute; width: 700px; height: 700px;
+      background: radial-gradient(circle, rgba(232,0,29,0.09) 0%, transparent 60%);
+      bottom: -200px; left: -150px; pointer-events: none;
+    }
+    .contact-inner { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    .contact-left .label { color: rgba(232,0,29,0.8); }
+    .contact-left h2 { font-size: clamp(2.4rem, 4.5vw, 3.6rem); font-weight: 900; letter-spacing: -2px; color: var(--white); line-height: 1.0; margin-bottom: 1.25rem; }
+    .contact-left p { font-size: 1rem; color: rgba(240,235,225,0.85); line-height: 1.8; margin-bottom: 2.5rem; }
+    .btn-white {
+      display: inline-flex; align-items: center; gap: 0.45rem;
+      background: var(--white); color: var(--dark); text-decoration: none;
+      padding: 0.95rem 1.85rem; border-radius: 10px; font-weight: 800; font-size: 0.95rem;
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s, color 0.2s;
+    }
+    .btn-white:hover { background: var(--red); color: var(--white); transform: translateY(-2px); box-shadow: 0 12px 36px rgba(232,0,29,0.35); }
+    .contact-rechts { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.07); border-radius: 24px; padding: 2.5rem; }
+    .contact-item { display: flex; gap: 1.1rem; align-items: flex-start; padding: 1.25rem 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .contact-item:first-child { padding-top: 0; }
+    .contact-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .ci-icon { font-size: 1.1rem; width: 42px; height: 42px; background: rgba(232,0,29,0.08); border: 1px solid rgba(232,0,29,0.14); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .ci-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 0.25rem; }
+    .ci-value { font-size: 0.95rem; font-weight: 600; color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s; }
+    .ci-value:hover { color: var(--red); }
+
+    /* ── FAQ ── */
+    .faq { background: var(--bg); padding: 6rem 0; }
+    .faq-titel { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; color: var(--dark); margin-bottom: 0.5rem; }
+    .faq-subtitel { font-size: 1rem; color: var(--muted); margin-bottom: 3rem; }
+    .faq-lijst { max-width: 760px; display: flex; flex-direction: column; gap: 0; }
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-vraag { width: 100%; background: none; border: none; text-align: left; padding: 1.4rem 0; font-size: 1rem; font-weight: 700; color: var(--dark); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; font-family: inherit; }
+    .faq-vraag:hover { color: var(--red); }
+    .faq-icon { font-size: 1.3rem; font-weight: 400; color: var(--red); flex-shrink: 0; transition: transform 0.3s; }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+    .faq-antwoord { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s; }
+    .faq-antwoord-inner { padding-bottom: 1.4rem; font-size: 0.95rem; color: var(--muted); line-height: 1.75; }
+
+    /* ── FOOTER ── */
+    footer { background: #080C12; padding: 2.5rem 0; border-top: 1px solid rgba(255,255,255,0.05); }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; }
+    .footer-logo img { height: 30px; width: auto; }
+    footer p { font-size: 0.8rem; color: rgba(255,255,255,0.25); }
+    .footer-links { display: flex; gap: 1.75rem; }
+    .footer-links a { font-size: 0.8rem; color: rgba(255,255,255,0.3); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: rgba(255,255,255,0.75); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 980px) {
+      .section-intro { grid-template-columns: 1fr; gap: 1.75rem; }
+      .diensten-grid { grid-template-columns: 1fr 1fr; }
+      .missie-inner { grid-template-columns: 1fr; gap: 3.5rem; }
+      .waarom-gem-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .profiel-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .profiel-foto-wrap { max-width: 320px; }
+      .agenda-grid { grid-template-columns: 1fr; }
+      .contact-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .cijfers-inner { grid-template-columns: repeat(2, 1fr); }
+      .cijfer-item:nth-child(2) { border-right: none; }
+      .cijfer-item:nth-child(3) { border-top: 1px solid var(--border); }
+      .cijfer-item:nth-child(4) { border-top: 1px solid var(--border); border-right: none; }
+    }
+    @media (max-width: 680px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .hero h1 { letter-spacing: -2px; }
+      .hero-vertical-wrap { display: none; }
+      .diensten-grid { grid-template-columns: 1fr; }
+      .hero-photo-wrap {
+        width: 100%;
+        opacity: 0.65;
+      }
+      .hero-photo-wrap::before {
+        background: linear-gradient(rgba(13,15,26,0.2) 0%, rgba(13,15,26,0.5) 60%, var(--dark) 100%);
+      }
+      .hero-photo-wrap::after {
+        display: none;
+      }
+      .profiel-badge { display: none; }
+      .footer-inner { flex-direction: column; text-align: center; gap: 1rem; }
+      .footer-links { flex-wrap: wrap; justify-content: center; gap: 1rem; }
+    }
+    @media (max-width: 460px) {
+      .hero-proof { display: none; }
+      .contact-rechts { display: none; }
+    }
+
+    /* ── FLOATING CTA ── */
+    .float-cta {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      z-index: 200;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--red);
+      color: var(--white);
+      text-decoration: none;
+      padding: 0.9rem 1.65rem;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      box-shadow: 0 8px 32px rgba(232,0,29,0.38);
+      opacity: 0;
+      transform: translateY(14px);
+      pointer-events: none;
+      transition: opacity 0.35s cubic-bezier(0.22,1,0.36,1), transform 0.35s cubic-bezier(0.22,1,0.36,1), box-shadow 0.2s;
+      white-space: nowrap;
+    }
+    .float-cta.zichtbaar {
+      opacity: 1;
+      transform: none;
+      pointer-events: auto;
+    }
+    .float-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 48px rgba(232,0,29,0.48);
+    }
+    @media (max-width: 460px) {
+      .float-cta {
+        bottom: 1.25rem;
+        right: 1.25rem;
+        padding: 0.75rem 1.2rem;
+        font-size: 0.82rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Thinkaigain.nl - AI Geletterdheid door Dick Noort</h1>
-        </div>
-    </header>
 
-    <div class="container">
-        <main>
-            <article>
-                <h2>Wat is AI Geletterdheid?</h2>
-                <p>Welkom op <strong>thinkaigain.nl</strong>. Mijn naam is <strong>Dick Noort</strong>, en ik help mensen de wereld van kunstmatige intelligentie te begrijpen door middel van <strong>AI Geletterdheid</strong>. In een snel veranderende digitale samenleving is het cruciaal om niet alleen de mogelijkheden van AI te kennen, maar ook de ethische implicaties ervan.</p>
-
-                <p>AI Geletterdheid betekent dat je in staat bent om AI-systemen kritisch te evalueren en effectief in te zetten in je dagelijks leven, onderwijs, of werk. Met de juiste kennis over AI Geletterdheid ben je klaar voor de toekomst.</p>
-            </article>
-
-            <article>
-                <h2>Over Dick Noort</h2>
-                <p>Als expert op het gebied van <strong>AI Geletterdheid</strong>, is <strong>Dick Noort</strong> toegewijd aan het overbruggen van de kloof tussen complexe technologie en praktische toepassing. Op thinkaigain.nl deelt Dick Noort zijn inzichten, artikelen en hulpmiddelen om iedereen te helpen AI geletterd te worden.</p>
-            </article>
-        </main>
+  <!-- ── NAVIGATIE ── -->
+  <nav id="navbar">
+    <div class="container nav-inner">
+      <a href="#" class="nav-logo">
+        <img src="assets/ThinkAIgain_logo_voor zwarte achtergrond.png" alt="Think AIgain">
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#diensten">Workshops</a></li>
+        <li><a href="diensten.html">Diensten</a></li>
+        <li><a href="over.html">Over</a></li>
+        <li><a href="cases.html">Cases</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta">Plan een gesprek →</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+  </nav>
 
-    <footer>
-        <p>&copy; 2024 thinkaigain.nl | AI Geletterdheid door Dick Noort. Alle rechten voorbehouden.</p>
-    </footer>
+  <!-- ── HERO ── -->
+  <section class="hero">
+    <div class="hero-grid"></div>
+    <!-- Parallax hero foto -->
+    <div class="hero-photo-wrap">
+      <video class="hero-photo-img" autoplay muted loop playsinline>
+        <source src="assets/Presenting.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="hero-glow"></div>
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-eyebrow">
+          <span class="dot"></span>
+          AI Geletterdheid, Training, Workshops &amp; Cursussen
+        </div>
+        <h1>AI Geletterdheid is voor<br/>iedereen die<br/>kan <em>typen</em></h1>
+        <p class="hero-desc">Think AIgain biedt door Dick Noort ontworpen AI trainingen, workshops en cursussen voor jou en je team om AI Geletterdheid te vergroten. Geen technisch gedoe — wel direct resultaat. Praktisch toepasbaar voor gemeenten, MKB en non-profit.</p>
+        <div class="hero-actions">
+          <a href="#diensten" class="btn-ghost-white">Bekijk workshops</a>
+        </div>
+        <div class="hero-proof">
+          <div class="hero-proof-faces">
+            <span>👤</span><span>👤</span><span>👤</span><span>👤</span><span>👤</span>
+          </div>
+          <p><strong>250+ medewerkers</strong> gecertificeerd</p>
+        </div>
+      </div>
+    </div>
+    <div class="hero-vertical-wrap">
+      <span class="hero-vertical-brand">Think AIgain</span>
+      <span class="hero-vertical-slogan">Human intent, amplified with AI</span>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-line"></div>
+      Scroll
+    </div>
+  </section>
+
+  <!-- ── CIJFERS ── -->
+  <div class="cijfers">
+    <div class="container">
+      <div class="cijfers-inner">
+        <div class="cijfer-item">
+          <div class="cijfer-num">250<em>+</em></div>
+          <div class="cijfer-label">Medewerkers gecertificeerd</div>
+        </div>
+        <div class="cijfer-item">
+          <div class="cijfer-num">3</div>
+          <div class="cijfer-label">Kernprogramma's</div>
+        </div>
+        <div class="cijfer-item">
+          <div class="cijfer-num">30</div>
+          <div class="cijfer-label">Min. gratis intake</div>
+        </div>
+        <div class="cijfer-item">
+          <div class="cijfer-num">100<em>%</em></div>
+          <div class="cijfer-label">Praktisch toepasbaar</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── DIENSTEN ── -->
+  <section id="diensten" class="diensten">
+    <div class="container">
+      <div class="section-intro">
+        <div class="reveal-left">
+          <span class="label">Wat we aanbieden</span>
+          <h2>AI Geletterdheid en workshops die écht aanspreken</h2>
+        </div>
+        <div class="section-intro-right reveal-right" style="transition-delay:.1s">
+          <p>Van een eerste kennismaking met AI tot een diepgaande masterclass voor volledige AI Geletterdheid. Wij passen ons volledig aan op jouw niveau en situatie. Hands-on, praktisch, direct toepasbaar.</p>
+          <a href="#contact" class="btn-dark">Neem contact op →</a>
+        </div>
+      </div>
+
+      <div class="diensten-grid">
+
+        <div class="dienst-card reveal">
+          <div class="dienst-img" id="dimg1">
+            <img src="assets/dick-noort.png"
+                 alt="AI Training" class="pimg" data-speed="0.12">
+            <div class="dienst-img-overlay"></div>
+            <span class="dienst-img-label">AI Geletterdheid</span>
+          </div>
+          <div class="dienst-body">
+            <h3>AI Workshops</h3>
+            <p>Praktische laagdrempelige workshops, met je eigen werkvoorbeelden als uitgangspunt. Inclusief het bewezen AI-geletterdheid programma waarmee 250+ medewerkers bij een gemeente in regio Zwolle gecertificeerd zijn. AI inzetten zonder te weten waar de grenzen liggen is geen vooruitgang. Dat is een risico.</p>
+            <a href="#contact" class="dienst-link">Meer informatie →</a>
+            <div class="na-afloop">
+              <span class="na-afloop-label">Na afloop</span>
+              <p>Je leert op welke wijze je effectiever AI kunt gebruiken voor alle vraagstukken die je hebt. Je kent de spelregels en risico's rondom verantwoord gebruik van AI en krijgt concrete handvatten in de aanpak en denkwijze om praktisch beschikbare kennis uit AI kunt toepassen op werk en leven.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="dienst-card reveal" style="transition-delay:.1s">
+          <div class="dienst-img" id="dimg2">
+            <img src="assets/Afbeelding van WhatsApp op 2024-12-06 om 13.15.54_8d78692e.jpg"
+                 alt="Inspiratiesessie" class="pimg" data-speed="0.16">
+            <div class="dienst-img-overlay"></div>
+            <span class="dienst-img-label">AI Inspiratiesessie</span>
+          </div>
+          <div class="dienst-body">
+            <h3>Inspiratiesessies</h3>
+            <p>Een sessie boordevol materiaal en voorbeelden, in beeld én geluid. Aan de hand van live demo's, video's en herkenbare verhalen uit de praktijk laat ik zien hoe ver AI al is doorgedrongen in ons dagelijks leven: van bankieren tot zorg, van verkeer tot de gemeentelijke dienstverlening. Eerlijk, concreet en verrassend dichtbij.</p>
+            <a href="#contact" class="dienst-link">Meer informatie →</a>
+            <div class="na-afloop">
+              <span class="na-afloop-label">Na afloop</span>
+              <p>Iedereen heeft een breed en gedeeld beeld van hoe ver AI al onderdeel is van het dagelijks leven, op welke terreinen het al is doorgedrongen én wat dat betekent voor jullie eigen werk.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="dienst-card reveal" style="transition-delay:.2s">
+          <div class="dienst-img" id="dimg3">
+            <img src="assets/hf_20260227_231111_c5613594-1b5b-4ed0-9bed-88e9fb484a07.jpeg"
+                 alt="NotebookLM Masterclass" class="pimg" data-speed="0.1">
+            <div class="dienst-img-overlay"></div>
+            <span class="dienst-img-label">Masterclass NotebookLM</span>
+          </div>
+          <div class="dienst-body">
+            <h3>NotebookLM Masterclass</h3>
+            <p>Google NotebookLM is een van de krachtigste AI-tools die de meeste mensen nog niet kennen. Leer grote hoeveelheden informatie analyseren, samenvatten en omzetten in bruikbare output: van beleidsdocumenten, tot diepgaande online onderzoeken. Van wetgeving tot miljoenennota, snel en effectief grote hoeveelheden informatie betrouwbaar omzetten naar bruikbare teksten was nog nooit zo eenvoudig. Bijzonder geschikt voor beleidsmedewerkers en adviseurs.</p>
+            <a href="#contact" class="dienst-link">Meer informatie →</a>
+            <div class="na-afloop">
+              <span class="na-afloop-label">Na afloop</span>
+              <p>Je werkt zelfstandig met NotebookLM, bevraagt je eigen bronnen en ervaart hoe deze tool je uren bespaart bij het verwerken van lange documenten.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── MISSIE ── -->
+  <section class="missie">
+    <div class="container">
+      <div class="missie-inner">
+        <div class="missie-left reveal-left">
+          <span class="label" style="color:rgba(232,0,29,0.8);">Onze missie</span>
+          <p class="grote-quote">"AI is geen bedreiging. Het is een <em>verrijking</em> voor je werk én je leven."</p>
+          <p class="sub">Think AIgain maakt AI toegankelijk voor iedereen, ongeacht functie, achtergrond of technische kennis. Niet als hype, maar als echte meerwaarde in het dagelijks werk van elke professional en elk team.</p>
+        </div>
+        <div class="missie-right reveal-right" style="transition-delay:.12s">
+          <div class="missie-punt">
+            <div class="m-icon">🎯</div>
+            <div>
+              <h3>Direct toepasbaar</h3>
+              <p>Na elke sessie ga je naar huis met iets wat je de volgende dag al kunt gebruiken. Geen wollige verhalen, maar concrete stappen.</p>
+            </div>
+          </div>
+          <div class="missie-punt">
+            <div class="m-icon">🤝</div>
+            <div>
+              <h3>Mensen worden waardevoller</h3>
+              <p>Mensen die met AI leren werken worden niet vervangen. Ze krijgen tijd terug voor het werk dat ertoe doet: nadenken, verbinden en luisteren.</p>
+            </div>
+          </div>
+          <div class="missie-punt">
+            <div class="m-icon">🌍</div>
+            <div>
+              <h3>Inclusief van nature</h3>
+              <p>Van beleidsadviseur tot baliemedewerker, van directeur tot uitvoerder: iedereen kan met AI aan de slag. Je hoeft geen techneut te zijn. Nieuwsgierigheid is genoeg. Die mensen verrassen zichzelf het meest.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROFIEL ── -->
+  <section id="profiel" class="profiel">
+    <div class="container">
+      <div class="profiel-inner">
+        <div class="reveal-left">
+          <div class="profiel-foto-wrap">
+            <img src="assets/528a7b1f-05b0-4025-8d03-f860cb0f0f6e.jpg" alt="Dick Noort" class="profiel-foto pimg" data-speed="0.1">
+            <span class="profiel-badge">AI simpel gemaakt</span>
+          </div>
+        </div>
+        <div class="profiel-content reveal-right" style="transition-delay:.12s">
+          <span class="label">Wie zit erachter</span>
+          <h2>AI Geletterdheid Expert Dick Noort</h2>
+          <p class="profiel-rol">I-Adviseur M365 &amp; AI Geletterdheid · Oprichter Think AIgain</p>
+          <p>Als I-Adviseur bij een middelgrote gemeente weet ik als geen ander hoe het voelt om tussen beleid, systemen en dagelijkse werkdruk te laveren. En ik zie elke dag hoe AI die werkdruk kan verlichten, als je weet waar je moet beginnen. Mijn missie is om AI Geletterdheid voor iedereen toegankelijk te maken.</p>
+          <p>Binnen die gemeente heb ik ruim 250 medewerkers mogen trainen en certificeren in AI Geletterdheid. Die kennis en ervaring met AI wilde ik niet voor mezelf houden. De behoefte aan praktische AI-kennis is overal: bij elke gemeente, elke (overheids)organisatie, elk team dat merkt dat de wereld sneller verandert dan de werkwijzen.</p>
+          <p>Daarom heb ik Think AIgain opgericht. Niet om je te overtuigen dat AI de toekomst is. Maar om je te laten <em>ervaren</em> dat AI vandaag al verschil maakt.</p>
+          <div class="profiel-tags">
+            <span class="p-tag">Microsoft 365</span>
+            <span class="p-tag">AI &amp; Automatisering</span>
+            <span class="p-tag">NotebookLM</span>
+            <span class="p-tag">Regio Zwolle</span>
+            <span class="p-tag">Training &amp; Inspiratie</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── WAAROM GEMEENTEN ── -->
+  <section class="waarom-gem">
+    <div class="container">
+      <div class="waarom-gem-inner">
+        <div class="wg-tekst reveal-left">
+          <span class="label">Focus</span>
+          <h2>Waarom gemeenten en overheidsorganisaties</h2>
+          <p>De publieke sector staat voor enorme uitdagingen: toenemende werkdruk, krappe bezetting, complexe regelgeving en stijgende verwachtingen van inwoners. Tegelijkertijd liggen er AI-tools klaar die het werk aantoonbaar lichter en beter maken.</p>
+          <p>Maar de stap naar AI voelt voor veel ambtenaren groot. Er zijn vragen over privacy, over betrouwbaarheid, over wat wel en niet mag. Die vragen neem ik serieus. In mijn workshops besteed ik altijd aandacht aan verantwoord gebruik en de grenzen van AI.</p>
+          <p class="wg-quote">"Ik spreek de taal van de gemeente, omdat ik er zelf werk. Dat maakt het verschil."</p>
+        </div>
+        <div class="wg-cards reveal-right" style="transition-delay:.12s">
+          <div class="wg-card">
+            <div class="wg-icon">⚖️</div>
+            <div>
+              <h3>Verantwoord gebruik</h3>
+              <p>AI inzetten zonder te weten waar de grenzen liggen is geen vooruitgang. Dat is een risico. Elke training besteedt aandacht aan privacy, betrouwbaarheid en wat er voor overheidsorganisaties wel en niet mag.</p>
+            </div>
+          </div>
+          <div class="wg-card">
+            <div class="wg-icon">🏛️</div>
+            <div>
+              <h3>Taal van de gemeente</h3>
+              <p>Als I-Adviseur bij een middelgrote gemeente ken ik de werkdruk, de systemen en het politieke speelveld van binnenuit. Geen generieke slides, maar herkenbare praktijkvoorbeelden uit jouw wereld.</p>
+            </div>
+          </div>
+          <div class="wg-card">
+            <div class="wg-icon">📚</div>
+            <div>
+              <h3>Van documenten naar inzicht</h3>
+              <p>Beleidsstukken, wetgeving, rapporten: de informatie is er, maar het overzicht ontbreekt. Met Google NotebookLM maak ik van stapels complexe documenten een doorzoekbare bruikbare kennisbron die direct antwoord geeft. In mijn masterclass leer je precies hoe dat werkt, ook met jouw eigen bronnen.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PARALLAX BAND ── -->
+  <div class="parallax-band">
+    <div class="parallax-band-overlay"></div>
+  </div>
+
+  <!-- ── TESTIMONIAL ── -->
+  <section class="testimonial">
+    <div class="container">
+      <div class="testimonial-inner reveal">
+        <span class="quote-mark">"</span>
+        <blockquote>
+          "Ik had nooit gedacht dat ik dat ook zou kunnen gebruiken. Zoals jij het vertelt, durf ik er morgen mee te beginnen en heb ik allerlei ideeën wat ik met AI <em>kan gaan doen</em>."
+        </blockquote>
+        <cite>Deelnemer AI Training, een Nederlandse gemeente</cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="contact-inner">
+        <div class="contact-left reveal-left">
+          <span class="label">Neem contact op</span>
+          <h2>Laten we kennismaken</h2>
+          <p>Wil je weten wat Think AIgain voor jouw team of organisatie kan betekenen? Neem gerust contact op voor een vrijblijvend gesprek. Samen kijken we welke vorm het beste past bij jullie situatie en ambitie.</p>
+          <a href="mailto:info@thinkaigain.nl" class="btn-white">Stuur een bericht →</a>
+        </div>
+        <div class="contact-rechts reveal-right" style="transition-delay:.12s">
+          <div class="contact-item">
+            <div class="ci-icon">📧</div>
+            <div><div class="ci-label">E-mail</div><a href="mailto:info@thinkaigain.nl" class="ci-value">info@thinkaigain.nl</a></div>
+          </div>
+          <div class="contact-item">
+            <div class="ci-icon">📅</div>
+            <div><div class="ci-label">Intake gesprek</div><div class="ci-value">30 minuten · Gratis &amp; vrijblijvend</div></div>
+          </div>
+          <div class="contact-item">
+            <div class="ci-icon">📍</div>
+            <div><div class="ci-label">Werkgebied</div><div class="ci-value">Regio Zwolle · In-company</div></div>
+          </div>
+          <div class="contact-item">
+            <div class="ci-icon">🕐</div>
+            <div><div class="ci-label">Reactietijd</div><div class="ci-value">Binnen 1 werkdag</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FAQ ── -->
+  <section id="faq" class="faq">
+    <div class="container">
+      <h2 class="faq-titel">Veelgestelde vragen</h2>
+      <p class="faq-subtitel">Alles wat je wilt weten over AI geletterdheid, workshops en advies.</p>
+      <div class="faq-lijst">
+
+        <div class="faq-item">
+          <button class="faq-vraag">Wat is AI geletterdheid?<span class="faq-icon">+</span></button>
+          <div class="faq-antwoord"><div class="faq-antwoord-inner">AI geletterdheid betekent dat je begrijpt wat AI is, hoe het werkt en hoe je het verantwoord en effectief kunt inzetten in je werk. Het gaat niet om programmeren, maar om inzicht en praktische vaardigheden.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-vraag">Voor wie zijn de AI workshops geschikt?<span class="faq-icon">+</span></button>
+          <div class="faq-antwoord"><div class="faq-antwoord-inner">De workshops zijn geschikt voor iedereen — van teams die net beginnen met AI tot organisaties die AI al gebruiken maar verder willen groeien. Geen technische achtergrond vereist.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-vraag">Wat is een AI inspiratiesessie?<span class="faq-icon">+</span></button>
+          <div class="faq-antwoord"><div class="faq-antwoord-inner">Een AI inspiratiesessie is een interactieve sessie waarin we verkennen wat AI voor jouw organisatie kan betekenen. Praktisch, concreet en direct toepasbaar — geen vage theorie.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-vraag">Hoe lang duurt een workshop?<span class="faq-icon">+</span></button>
+          <div class="faq-antwoord"><div class="faq-antwoord-inner">Een workshop duurt doorgaans een halve of hele dag, afhankelijk van de wensen van jouw organisatie. Maatwerk is altijd mogelijk.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-vraag">Wat maakt Think AIgain anders?<span class="faq-icon">+</span></button>
+          <div class="faq-antwoord"><div class="faq-antwoord-inner">Think AIgain combineert diepgaande AI-kennis met een toegankelijke aanpak. Geen jargon, geen overbodige complexiteit — alleen wat écht werkt voor jouw team.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-vraag">Kan ik een workshop op maat aanvragen?<span class="faq-icon">+</span></button>
+          <div class="faq-antwoord"><div class="faq-antwoord-inner">Ja, absoluut. Elke organisatie is anders. Na een kort kennismakingsgesprek stemmen we de inhoud af op jouw situatie, sector en doelen.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-vraag">Moet ik technische kennis hebben om mee te doen?<span class="faq-icon">+</span></button>
+          <div class="faq-antwoord"><div class="faq-antwoord-inner">Nee. De workshops van Think AIgain zijn bewust ontworpen voor mensen zonder technische achtergrond. Iedereen kan aan de slag met AI.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-vraag">Wat kost een workshop of training?<span class="faq-icon">+</span></button>
+          <div class="faq-antwoord"><div class="faq-antwoord-inner">De kosten zijn afhankelijk van de vorm, duur en groepsgrootte. We starten altijd met een gratis kennismakingsgesprek van 30 minuten, waarin we jouw situatie bespreken en een passend voorstel maken.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-vraag">Hoeveel deelnemers kunnen er meedoen aan een sessie?<span class="faq-icon">+</span></button>
+          <div class="faq-antwoord"><div class="faq-antwoord-inner">Een workshop werkt het beste met groepen van 8 tot 25 deelnemers. Zo is er genoeg ruimte voor interactie en persoonlijke aandacht. Voor grotere organisaties kunnen meerdere sessies worden ingepland.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-vraag">Hoe zit het met privacy en veiligheid bij AI?<span class="faq-icon">+</span></button>
+          <div class="faq-antwoord"><div class="faq-antwoord-inner">Goede vraag — en een belangrijk onderwerp. In elke training besteden we expliciet aandacht aan verantwoord AI-gebruik: wat mag je wel en niet invoeren, hoe ga je om met persoonsgegevens, en welke regels gelden voor overheidsorganisaties. AI gebruiken zónder die kennis is een risico.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-vraag">Welke AI-tools komen aan bod?<span class="faq-icon">+</span></button>
+          <div class="faq-antwoord"><div class="faq-antwoord-inner">We werken met toegankelijke tools die je direct kunt gebruiken, zoals ChatGPT, Microsoft Copilot en Google NotebookLM. De focus ligt altijd op wat praktisch toepasbaar is in jouw werksituatie — niet op een willekeurige lijst van tools.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-vraag">Waar is Think AIgain actief?<span class="faq-icon">+</span></button>
+          <div class="faq-antwoord"><div class="faq-antwoord-inner">Think AIgain is actief in de regio Zwolle en geeft uitsluitend in-company workshops — bij jou op locatie, binnen jouw organisatie.</div></div>
+        </div>
+
+
+        <div class="faq-item">
+          <button class="faq-vraag">Hoe snel kan een workshop worden ingepland?<span class="faq-icon">+</span></button>
+          <div class="faq-antwoord"><div class="faq-antwoord-inner">Na het eerste gesprek kunnen we doorgaans binnen 2 tot 4 weken een sessie inplannen. Bij dringende behoefte kijken we altijd naar de mogelijkheden om sneller te starten.</div></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── LOCALBUSINESS SCHEMA (SEO) ── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Think AIgain",
+    "url": "https://thinkaigain.nl",
+    "description": "AI trainingen, workshops en cursussen voor bedrijven, gemeenten en teams.",
+    "founder": {
+      "@type": "Person",
+      "name": "Dick Noort",
+      "jobTitle": "AI Trainer & Adviseur"
+    },
+    "areaServed": "Netherlands",
+    "serviceType": ["AI training", "AI workshop", "AI cursus", "AI opleiding", "Copilot training", "AI inspiratiesessie"],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "info@thinkaigain.nl",
+      "contactType": "customer service"
+    }
+  }
+  </script>
+
+  <!-- ── FAQ SCHEMA (SEO) ── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"Wat is AI geletterdheid?","acceptedAnswer":{"@type":"Answer","text":"AI geletterdheid betekent dat je begrijpt wat AI is, hoe het werkt en hoe je het verantwoord en effectief kunt inzetten in je werk."}},
+      {"@type":"Question","name":"Voor wie zijn de AI workshops geschikt?","acceptedAnswer":{"@type":"Answer","text":"De workshops zijn geschikt voor iedereen — van teams die net beginnen met AI tot organisaties die AI al gebruiken maar verder willen groeien."}},
+      {"@type":"Question","name":"Wat is een AI inspiratiesessie?","acceptedAnswer":{"@type":"Answer","text":"Een AI inspiratiesessie is een interactieve sessie waarin we verkennen wat AI voor jouw organisatie kan betekenen."}},
+      {"@type":"Question","name":"Hoe lang duurt een workshop?","acceptedAnswer":{"@type":"Answer","text":"Een workshop duurt doorgaans een halve of hele dag, afhankelijk van de wensen van jouw organisatie."}},
+      {"@type":"Question","name":"Wat maakt Think AIgain anders?","acceptedAnswer":{"@type":"Answer","text":"Think AIgain combineert diepgaande AI-kennis met een toegankelijke aanpak. Geen jargon, geen overbodige complexiteit."}},
+      {"@type":"Question","name":"Kan ik een workshop op maat aanvragen?","acceptedAnswer":{"@type":"Answer","text":"Ja. Na een kort kennismakingsgesprek stemmen we de inhoud af op jouw situatie, sector en doelen."}},
+      {"@type":"Question","name":"Moet ik technische kennis hebben om mee te doen?","acceptedAnswer":{"@type":"Answer","text":"Nee. De workshops zijn bewust ontworpen voor mensen zonder technische achtergrond."}},
+      {"@type":"Question","name":"Wat kost een workshop of training?","acceptedAnswer":{"@type":"Answer","text":"De kosten zijn afhankelijk van de vorm, duur en groepsgrootte. We starten altijd met een gratis kennismakingsgesprek van 30 minuten."}},
+      {"@type":"Question","name":"Hoeveel deelnemers kunnen er meedoen aan een sessie?","acceptedAnswer":{"@type":"Answer","text":"Een workshop werkt het beste met groepen van 8 tot 25 deelnemers. Voor grotere organisaties kunnen meerdere sessies worden ingepland."}},
+      {"@type":"Question","name":"Hoe zit het met privacy en veiligheid bij AI?","acceptedAnswer":{"@type":"Answer","text":"In elke training besteden we expliciet aandacht aan verantwoord AI-gebruik: wat mag je wel en niet invoeren, hoe ga je om met persoonsgegevens, en welke regels gelden voor overheidsorganisaties."}},
+      {"@type":"Question","name":"Welke AI-tools komen aan bod?","acceptedAnswer":{"@type":"Answer","text":"We werken met toegankelijke tools zoals ChatGPT, Microsoft Copilot en Google NotebookLM. De focus ligt altijd op wat praktisch toepasbaar is in jouw werksituatie."}},
+      {"@type":"Question","name":"Waar is Think AIgain actief?","acceptedAnswer":{"@type":"Answer","text":"Think AIgain is actief in de regio Zwolle en geeft uitsluitend in-company workshops — bij jou op locatie, binnen jouw organisatie."}},
+{"@type":"Question","name":"Hoe snel kan een workshop worden ingepland?","acceptedAnswer":{"@type":"Answer","text":"Na het eerste gesprek kunnen we doorgaans binnen 2 tot 4 weken een sessie inplannen."}}
+    ]
+  }
+  </script>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-logo">
+        <img src="assets/ThinkAIgain_logo_voor zwarte achtergrond.png" alt="Think AIgain">
+      </div>
+      <p>© 2025 thinkaigain.nl &nbsp;·&nbsp; Alle rechten voorbehouden</p>
+      <div class="footer-links">
+        <a href="#diensten">Workshops</a>
+        <a href="#profiel">Over</a>
+        <a href="mailto:info@thinkaigain.nl">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── FLOATING CTA ── -->
+  <a href="#contact" class="float-cta" id="floatCta">Plan een gesprek →</a>
+
+  <script>
+    // ─────────────────────────────────────────────
+    // PARALLAX ENGINE — één requestAnimationFrame loop
+    // ─────────────────────────────────────────────
+
+    // Verzamel alle parallax-afbeeldingen eenmalig
+    const parallaxImgs = [];
+
+    document.querySelectorAll('.pimg').forEach(img => {
+      parallaxImgs.push({
+        el: img,
+        speed: parseFloat(img.dataset.speed) || 0.15
+      });
+    });
+
+    // Hero achtergrond (aparte parallax)
+    const heroPhotoBg = document.getElementById('heroPhotoBg');
+
+    // ─── SMOOTH STATE ───
+    let scrollY = window.scrollY;
+    let smoothY = scrollY;
+
+    // ─── ANIMATIELUS ───
+    function raf() {
+      // Zachte interpolatie voor soepel scrollgevoel
+      smoothY += (scrollY - smoothY) * 0.09;
+
+      const wH = window.innerHeight;
+
+      // Hero foto parallax
+      if (heroPhotoBg) {
+        heroPhotoBg.style.transform = `translateY(${smoothY * 0.35}px)`;
+      }
+
+      // Alle .pimg elementen
+      parallaxImgs.forEach(({ el, speed }) => {
+        const rect = el.parentElement.getBoundingClientRect();
+        // Alleen uitvoeren als het element zichtbaar is in of nabij viewport
+        if (rect.bottom < -200 || rect.top > wH + 200) return;
+
+        // Afstand van het midden van het element tot het midden van het scherm
+        const centerOffset = (rect.top + rect.height / 2) - wH / 2;
+        const shift = centerOffset * speed;
+
+        el.style.transform = `translateY(${shift}px)`;
+      });
+
+      requestAnimationFrame(raf);
+    }
+
+    // Scroll opvangen (passief = beter voor performance)
+    window.addEventListener('scroll', () => { scrollY = window.scrollY; }, { passive: true });
+
+    // Start animatielus
+    requestAnimationFrame(raf);
+
+
+    // ─────────────────────────────────────────────
+    // FAQ ACCORDION
+    // ─────────────────────────────────────────────
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.querySelector('.faq-vraag').addEventListener('click', () => {
+        const antwoord = item.querySelector('.faq-antwoord');
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(i => {
+          i.classList.remove('open');
+          i.querySelector('.faq-antwoord').style.maxHeight = null;
+        });
+        if (!isOpen) {
+          item.classList.add('open');
+          antwoord.style.maxHeight = antwoord.scrollHeight + 'px';
+        }
+      });
+    });
+
+
+    // ─────────────────────────────────────────────
+    // SCROLL REVEAL
+    // ─────────────────────────────────────────────
+    const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    revealEls.forEach(el => io.observe(el));
+
+
+    // ─────────────────────────────────────────────
+    // NAVIGATIE
+    // ─────────────────────────────────────────────
+    const nav = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 30);
+    }, { passive: true });
+
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('navLinks');
+    if (hamburger && navLinks) {
+      hamburger.addEventListener('click', () => {
+        const open = navLinks.style.display === 'flex';
+        navLinks.style.cssText = open
+          ? ''
+          : 'display:flex;flex-direction:column;position:absolute;top:var(--nav-h);left:0;right:0;background:rgba(13,15,26,0.97);padding:1.5rem 2rem;gap:1.25rem;border-bottom:1px solid rgba(255,255,255,0.07);z-index:99;';
+      });
+      navLinks.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => { navLinks.style.cssText = ''; });
+      });
+    }
+
+
+    // ─────────────────────────────────────────────
+    // FLOATING CTA — verschijnt zodra hero uit beeld is
+    // ─────────────────────────────────────────────
+    const floatCta = document.getElementById('floatCta');
+    const heroSectie = document.querySelector('.hero');
+    if (floatCta && heroSectie) {
+      const updateFloat = () => {
+        const heroOnder = heroSectie.getBoundingClientRect().bottom;
+        floatCta.classList.toggle('zichtbaar', heroOnder < 0);
+      };
+      window.addEventListener('scroll', updateFloat, { passive: true });
+      updateFloat();
+    }
+
+
+    // ─────────────────────────────────────────────
+    // 3D TILT OP DIENST-KAARTEN
+    // ─────────────────────────────────────────────
+    document.querySelectorAll('.dienst-card').forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const r = card.getBoundingClientRect();
+        const x = ((e.clientX - r.left) / r.width  - 0.5) * 12;
+        const y = ((e.clientY - r.top)  / r.height - 0.5) * 12;
+        card.style.transitionDelay = '0s';
+        card.style.transform = `perspective(900px) rotateY(${x}deg) rotateX(${-y}deg) translateY(-8px)`;
+        card.style.boxShadow = `${-x * 1.2}px ${y * 1.2}px 50px rgba(0,0,0,0.12)`;
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transitionDelay = '';
+        card.style.transform = '';
+        card.style.boxShadow = '';
+      });
+    });
+
+    // ─────────────────────────────────────────────
+    // 3D TILT OP MISSIE-PUNTEN
+    // ─────────────────────────────────────────────
+    document.querySelectorAll('.missie-punt').forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const r = card.getBoundingClientRect();
+        const x = ((e.clientX - r.left) / r.width  - 0.5) * 12;
+        const y = ((e.clientY - r.top)  / r.height - 0.5) * 12;
+        card.style.transform = `perspective(900px) rotateY(${x}deg) rotateX(${-y}deg) translateY(-8px)`;
+        card.style.boxShadow = `${-x * 1.2}px ${y * 1.2}px 50px rgba(0,0,0,0.15)`;
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = '';
+        card.style.boxShadow = '';
+      });
+    });
+
+    // ─────────────────────────────────────────────
+    // 3D TILT OP WG-CARDS
+    // ─────────────────────────────────────────────
+    document.querySelectorAll('.wg-card').forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const r = card.getBoundingClientRect();
+        const x = ((e.clientX - r.left) / r.width  - 0.5) * 12;
+        const y = ((e.clientY - r.top)  / r.height - 0.5) * 12;
+        card.style.transform = `perspective(900px) rotateY(${x}deg) rotateX(${-y}deg) translateY(-8px)`;
+        card.style.boxShadow = `${-x * 1.2}px ${y * 1.2}px 50px rgba(0,0,0,0.12)`;
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = '';
+        card.style.boxShadow = '';
+      });
+    });
+
+    // ─────────────────────────────────────────────
+    // 3D TILT OP PROFIELFOTO
+    // ─────────────────────────────────────────────
+    const fotoWrap = document.querySelector('.profiel-foto-wrap');
+    if (fotoWrap) {
+      fotoWrap.addEventListener('mousemove', e => {
+        const r = fotoWrap.getBoundingClientRect();
+        const x = ((e.clientX - r.left) / r.width  - 0.5) * 12;
+        const y = ((e.clientY - r.top)  / r.height - 0.5) * 12;
+        fotoWrap.style.transform = `perspective(900px) rotateY(${x}deg) rotateX(${-y}deg)`;
+        fotoWrap.style.boxShadow = `${-x * 1.2}px ${y * 1.2}px 50px rgba(0,0,0,0.12)`;
+      });
+      fotoWrap.addEventListener('mouseleave', () => {
+        fotoWrap.style.transform = '';
+        fotoWrap.style.boxShadow = '';
+      });
+    }
+    // ─────────────────────────────────────────────
+    // VERTICALE SLOGAN UITREKKEN
+    // ─────────────────────────────────────────────
+    function stretchSlogan() {
+      const brand  = document.querySelector('.hero-vertical-brand');
+      const slogan = document.querySelector('.hero-vertical-slogan');
+      if (!brand || !slogan) return;
+      slogan.style.letterSpacing = '';
+      const brandH  = brand.getBoundingClientRect().height;
+      const sloganH = slogan.getBoundingClientRect().height;
+      const extra   = (brandH - sloganH) / slogan.textContent.length;
+      if (extra > 0) slogan.style.letterSpacing = extra + 'px';
+    }
+    window.addEventListener('load', stretchSlogan);
+    window.addEventListener('resize', stretchSlogan);
+
+  </script>
+
 </body>
 </html>
