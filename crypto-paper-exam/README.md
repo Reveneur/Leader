@@ -84,12 +84,54 @@ environment), every scheduler run correctly degrades to `CASH` with
 `data_status=DEGRADED` and a recorded `error_message` — this is the
 spec's required conservative behavior (section 17), not a bug.
 
+## Backtesting (`scripts/backtest.py`)
+
+A technical-only backtest against real historical BTC/USD data, reusing
+the exam's actual wallet/execution/risk engine unchanged. It exists to
+answer a narrower question than "is Exam V1 profitable" — see the module
+docstring in `scripts/backtest.py` for the full list of ways this mode
+deliberately differs from Exam V1 (single asset, no order-book data, no
+catalyst/on-chain data, its own eligibility rule).
+
+Data: [ff137/bitstamp-btcusd-minute-data](https://github.com/ff137/bitstamp-btcusd-minute-data)
+— real Bitstamp BTC/USD 1-minute OHLCV, fetched via `raw.githubusercontent.com`
+and cached locally (`src/data/historical_dataset.py`). This is the *only*
+external data source reachable from a sandboxed dev environment where
+direct exchange APIs (Bitvavo, Binance) and data-aggregator sites are
+blocked at the network layer — see that module's docstring.
+
+```bash
+python scripts/backtest.py --days 400                    # spec-faithful (breakout_min=7)
+python scripts/backtest.py --days 400 --breakout-min 6    # relaxed demo variant
+```
+
+**Two actual runs against ~13 months of real data (2025-06 to 2026-07, a
+falling BTC market — BTC buy-and-hold lost ~42% over this window):**
+
+| Run | Trades | Result | Max drawdown | Grade |
+|---|---|---|---|---|
+| `breakout_min=7` (spec default) | 0 | 0.00% | 0.00% | C |
+| `breakout_min=6` (relaxed demo) | 22 | -8.43% | 12.40% | D |
+
+Neither run "proves the system can lead to profit." The first shows the
+real threshold is strict enough to never fire at all on this asset/window
+— informative about how conservative the gate is, but zero trades is zero
+evidence either way. The second shows what happens once trades actually
+occur: a 13.6% win rate, profit factor 0.48, net loss — but one that still
+beat naive BTC buy-and-hold by a wide margin in a falling market, entirely
+because the risk rules (position sizing, drawdown throttling) did their
+job. That's a real, unmassaged result, not cherry-picked to look good —
+see the "what can you prove" discussion in this project's history for why
+a single backtest window like this should be read as "here's what
+happened," not "here's evidence of edge."
+
 ## Project layout
 
 ```
 config/            Frozen strategy parameters (exam_v1.yaml) + market universe
 src/
-  data/            Bitvavo client, candle/market repositories, optional news/on-chain clients
+  data/            Bitvavo client, candle/market repositories, optional news/on-chain clients,
+                   historical_dataset.py (backtest-only GitHub-hosted OHLCV loader)
   strategy/        The 11-agent ensemble as deterministic functions + eligibility scoring
   execution/       Fee/slippage/fill models, paper broker, stop/target engine
   portfolio/       Wallet, positions, accounting, risk manager
@@ -99,7 +141,8 @@ src/
   scheduler.py     The idempotent hourly orchestration
   main.py          Continuous scheduler entry point
 dashboard/         Streamlit dashboard
-scripts/           initialize_exam, run_once, backfill_candles, export_google_sheet, verify_integrity
+scripts/           initialize_exam, run_once, backfill_candles, export_google_sheet, verify_integrity,
+                   backtest (technical-only backtest against real historical data)
 tests/             pytest suite (accounting, fees, slippage, stop/target, risk, idempotency, config freeze)
 ```
 
