@@ -1,0 +1,63 @@
+# Exam V1 — frozen strategy configuration.
+#
+# Every parameter here is fixed for the duration of the exam period defined
+# in exam.start / exam.end. A hash of this file is stored at exam
+# initialization (see src/audit/config_freeze.py); every scheduler run
+# verifies the live file still hashes to that value. Any change during the
+# exam is rejected by the running system and must instead be recorded as a
+# proposal for "Version 2" — never applied in place.
+
+strategy_version: "Exam V1"
+
+exam:
+  start: "2026-07-11T08:16:00+02:00"
+  end: "2026-07-18T08:16:00+02:00"
+  wallet_admin_start: "2026-07-11T07:45:00+02:00"
+  timezone: "Europe/Amsterdam"
+
+wallet:
+  initial_cash_eur: 100.00
+
+execution:
+  taker_fee_pct: 0.25
+  maker_fee_pct: 0.15
+  default_slippage_buy_pct: 0.10
+  default_slippage_sell_pct: 0.10
+
+portfolio:
+  max_positions: 2
+  max_position_eur: 50.00
+  max_position_equity_pct: 50
+  normal_risk_pct: 3
+  exceptional_risk_pct: 5
+  exceptional_risk_min_score: 90
+  exceptional_risk_min_rr: 3.0
+  drawdown_reduce_pct: 8
+  drawdown_reduce_factor: 0.5
+  drawdown_stop_pct: 12
+
+eligibility:
+  regime_fit_min: 7
+  residual_strength_min: 7
+  breakout_min: 7
+  volume_min: 7
+  liquidity_execution_min: 8
+  adversarial_min: 7
+  overall_confidence_min: 75
+  net_reward_risk_min: 2.0
+
+loss_pause:
+  losses: 2
+  window_hours: 24
+  pause_hours: 12
+
+liquidity:
+  min_24h_volume_eur: 250000
+  max_spread_pct: 0.5
+  min_book_depth_eur: 5000
+  max_impact_eur: 50
+  min_market_history_days: 30
+
+intrahour:
+  reconstruction_interval: "1m"
+  ambiguous_stop_target_rule: "stop_first"

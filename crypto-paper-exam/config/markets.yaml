@@ -1,0 +1,22 @@
+# Handelsuniversum voor Exam V1.
+#
+# Alleen liquide spot-EUR-paren op Bitvavo. Deze lijst is een startpunt;
+# markten die niet aan de liquiditeitseisen in exam_v1.yaml voldoen worden
+# door de market_repository automatisch uitgesloten, ongeacht deze lijst.
+
+universe:
+  - BTC-EUR
+  - ETH-EUR
+  - SOL-EUR
+  - ADA-EUR
+  - XRP-EUR
+  - LTC-EUR
+  - DOT-EUR
+  - LINK-EUR
+  - AVAX-EUR
+  - MATIC-EUR
+
+excluded:
+  - leverage_tokens
+  - futures
+  - margin_pairs
